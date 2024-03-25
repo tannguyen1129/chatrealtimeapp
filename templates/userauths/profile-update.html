@@ -1,0 +1,73 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+  {% include 'chats/head.html' %}
+
+  <!-- login page start //-->
+  <body>
+    <div class="login-page2 animat-rate">
+      <div class="login-content-main"> 
+        <div class="login-content2">
+          <div class="theme-tab">       
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item"><a class="nav-link" id="login-tab" data-toggle="tab" href="{% url 'chats:message' %}" role="tab" aria-selected="false">Go back</a></li>
+  
+            </ul>
+          </div>
+        </div>
+        <div class="login-content">
+          <div class="login-content-header"><img class="img-fluid" src="{{ request.user.profile.profile_image.url }}" style="height: 70px; width: 70px; object-fit: cover; border-radius: 50px;" alt="images"></div>
+          <h3>Hello there 👋</h3>
+          <h4>Let's edit your profile</h4>
+          {% if form.errors %}
+            <div class="alert alert-danger"> 
+              <strong>{{ form.errors }}</strong>
+            </div>
+            {% endif %}
+          <form class="form2" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                
+            </div>
+            <div class="form-group">
+                
+            </div>
+          
+           
+            <div class="form-group mb-0">
+              <div class="buttons"><button type="submit" class="btn button-effect btn-primary" >Save Edit</button></div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="animation-block">
+        <div class="bg_circle">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="cross"></div>
+        <div class="cross1"></div>
+        <div class="cross2"></div>
+        <div class="dot"></div>
+        <div class="dot1"></div>
+        <div class="top-circle"></div>
+        <div class="center-circle"></div>
+        <div class="bottom-circle1"></div>
+        <div class="right-circle"></div>
+        <div class="right-circle1"></div>
+      </div>
+    </div>
+  </body>
+</html>
