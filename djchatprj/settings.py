@@ -24,7 +24,9 @@ SECRET_KEY = env('SECRET_KEY')
 DEBUG = True
 
 # On Production it's recommended to add the exact domain name here instead of ["*"] ;) 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['chatrealtimeapp.onrender.com','*']
+
+CSRF_TRUSTED_ORIGINS = ['https://chatrealtimeapp.onrender.com']
 
 
 # Application definition
